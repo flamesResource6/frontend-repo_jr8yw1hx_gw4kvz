@@ -29,7 +29,7 @@ export default function Products() {
                 <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-800">Smoribus</h3>
                 <p className="mt-2 text-orange-800/80 text-sm sm:text-base">Smoribus — our special s’mores.</p>
                 <div className="mt-3 sm:mt-4 flex flex-wrap items-center gap-2">
-                  <span className="inline-flex items-center rounded-full bg-orange-100 px-3 py-1 text-xs sm:text-sm font-semibold text-orange-800">Price: Rp10.000 per pack</span>
+                  <span className="inline-flex items-center rounded-full bg-orange-100 px-3 py-1 text-xs sm:text-sm font-semibold text-orange-800">Rp10.000/pack</span>
                   <span className="inline-flex items-center rounded-full bg-orange-50 px-3 py-1 text-[11px] sm:text-xs text-orange-800/80">1 pack = 2 Smoribus</span>
                 </div>
                 <div className="mt-4 sm:mt-5 inline-flex gap-2 sm:gap-3">
