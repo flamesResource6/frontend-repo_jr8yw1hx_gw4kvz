@@ -2,6 +2,7 @@ import Hero from './components/Hero'
 import Menu from './components/Menu'
 import Order from './components/Order'
 import Footer from './components/Footer'
+import Products from './components/Products'
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
 
       {/* Hero */}
       <Hero />
+
+      {/* Products highlight */}
+      <Products />
 
       {/* Menu & Prices */}
       <div id="menu">
