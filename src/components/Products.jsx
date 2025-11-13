@@ -20,15 +20,7 @@ export default function Products() {
             className="group relative overflow-hidden rounded-3xl border border-orange-100 bg-white shadow-sm"
           >
             <div className="grid sm:grid-cols-2 gap-0">
-              <div className="p-6 flex flex-col justify-center">
-                <h3 className="text-2xl font-bold text-orange-800">Smoribus</h3>
-                <p className="mt-2 text-orange-800/80">Gooey s’mores with toasted marshmallow, melty chocolate, and crisp crackers.</p>
-                <div className="mt-4 inline-flex gap-3">
-                  <a href="#order" className="px-4 py-2 rounded-full bg-orange-600 text-white text-sm font-semibold shadow hover:bg-orange-700 transition-colors">Order now</a>
-                  <a href="#menu" className="px-4 py-2 rounded-full text-orange-700 bg-orange-100/60 hover:bg-orange-200/70 text-sm font-semibold transition-colors">View menu</a>
-                </div>
-              </div>
-
+              {/* IMAGE LEFT */}
               <div className="relative">
                 {/* Melting effect wrapper */}
                 <motion.div
@@ -38,9 +30,9 @@ export default function Products() {
                   transition={{ type: 'spring', stiffness: 140, damping: 12 }}
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop"
-                    alt="Smoribus s’mores — melty chocolate and toasted marshmallow"
-                    className="h-full w-full object-cover"
+                    src="https://www.allrecipes.com/thmb/OH-rvI7qq5McTSTRBnP1U_1ZaC8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/22146-smores-VAT-001-4x3-c1b1e87400cf46e58858723a2e0431ce.jpg"
+                    alt="Smoribus — our special s’mores with melty chocolate and toasted marshmallow"
+                    className="h-full w-full object-cover object-center"
                   />
 
                   {/* subtle gloss */}
@@ -55,6 +47,20 @@ export default function Products() {
                   />
                 </motion.div>
               </div>
+
+              {/* TEXT RIGHT */}
+              <div className="p-6 flex flex-col justify-center">
+                <h3 className="text-2xl font-bold text-orange-800">Smoribus</h3>
+                <p className="mt-2 text-orange-800/80">Smoribus — our special s’mores.</p>
+                <div className="mt-3 flex flex-wrap items-center gap-2">
+                  <span className="inline-flex items-center rounded-full bg-orange-100 px-3 py-1 text-sm font-semibold text-orange-800">Price: Rp10.000 per pack</span>
+                  <span className="inline-flex items-center rounded-full bg-orange-50 px-3 py-1 text-xs text-orange-800/80">1 pack = 2 Smoribus</span>
+                </div>
+                <div className="mt-4 inline-flex gap-3">
+                  <a href="#order" className="px-4 py-2 rounded-full bg-orange-600 text-white text-sm font-semibold shadow hover:bg-orange-700 transition-colors">Order now</a>
+                  <a href="#menu" className="px-4 py-2 rounded-full text-orange-700 bg-orange-100/60 hover:bg-orange-200/70 text-sm font-semibold transition-colors">View menu</a>
+                </div>
+              </div>
             </div>
           </motion.article>
 
@@ -68,28 +74,28 @@ export default function Products() {
             className="group relative overflow-hidden rounded-3xl border border-orange-100 bg-white shadow-sm"
           >
             <div className="grid sm:grid-cols-2 gap-0">
-              <div className="relative order-2 sm:order-1">
+              {/* IMAGE LEFT */}
+              <div className="relative">
                 {/* Fries fall/steam area */}
                 <div className="relative h-72 sm:h-full">
                   {/* fries image */}
                   <motion.img
-                    src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=1200&auto=format&fit=crop"
-                    alt="Morifries — golden crispy fries"
-                    className="h-full w-full object-cover"
+                    src="https://kirbiecravings.com/wp-content/uploads/2019/09/easy-french-fries-1.jpg"
+                    alt="Morifries — our crispy french fries, golden and fluffy"
+                    className="h-full w-full object-cover object-center"
                     initial={{ y: -12, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, ease: 'easeOut' }}
                   />
 
-                  {/* steam on hover */}
+                  {/* steam loop */}
                   <div className="pointer-events-none absolute inset-0">
                     {[0, 1, 2].map((i) => (
                       <motion.span
                         key={i}
                         className="absolute left-1/2 top-6 h-10 w-10 -translate-x-1/2 rounded-full bg-gradient-to-b from-white/50 to-transparent"
                         initial={{ opacity: 0, y: 12, scale: 0.8 }}
-                        whileHover={{}}
                         animate={{
                           opacity: [0, 0.9, 0],
                           y: [12, -14, -24],
@@ -103,9 +109,14 @@ export default function Products() {
                 </div>
               </div>
 
-              <div className="p-6 flex flex-col justify-center order-1 sm:order-2">
+              {/* TEXT RIGHT */}
+              <div className="p-6 flex flex-col justify-center">
                 <h3 className="text-2xl font-bold text-orange-800">Morifries</h3>
-                <p className="mt-2 text-orange-800/80">Golden, seasoned fries with a fluffy center and perfect crisp.</p>
+                <p className="mt-2 text-orange-800/80">Morifries — our crispy french fries.</p>
+                <div className="mt-3 flex flex-wrap items-center gap-2">
+                  <span className="inline-flex items-center rounded-full bg-orange-100 px-3 py-1 text-sm font-semibold text-orange-800">Rp10.000 <span className="ml-1 text-xs font-normal text-orange-800/80">(medium)</span></span>
+                  <span className="inline-flex items-center rounded-full bg-orange-100 px-3 py-1 text-sm font-semibold text-orange-800">Rp15.000 <span className="ml-1 text-xs font-normal text-orange-800/80">(large)</span></span>
+                </div>
                 <div className="mt-4 inline-flex gap-3">
                   <a href="#order" className="px-4 py-2 rounded-full bg-orange-600 text-white text-sm font-semibold shadow hover:bg-orange-700 transition-colors">Order now</a>
                   <a href="#menu" className="px-4 py-2 rounded-full text-orange-700 bg-orange-100/60 hover:bg-orange-200/70 text-sm font-semibold transition-colors">View menu</a>
@@ -115,7 +126,7 @@ export default function Products() {
           </motion.article>
         </div>
 
-        <p className="mt-10 text-center text-sm text-orange-700/70">Swap these placeholder images with your provided shots — animations will work automatically.</p>
+        <p className="mt-10 text-center text-sm text-orange-700/70">Images are fitted to their boxes for a clean, consistent look. Use Tab to navigate CTAs.</p>
       </div>
     </section>
   )
