@@ -1,6 +1,5 @@
 import Hero from './components/Hero'
 import Products from './components/Products'
-import Menu from './components/Menu'
 import Order from './components/Order'
 import Footer from './components/Footer'
 
@@ -17,7 +16,6 @@ function App() {
           <nav className="hidden sm:flex items-center gap-6 text-sm text-orange-800/80">
             <a href="#smoribus" className="hover:text-orange-900">Smoribus</a>
             <a href="#morifries" className="hover:text-orange-900">Morifries</a>
-            <a href="#menu" className="hover:text-orange-900">Menu</a>
             <a href="#order" className="hover:text-orange-900">Order</a>
           </nav>
         </div>
@@ -26,15 +24,8 @@ function App() {
       {/* Hero */}
       <Hero />
 
-      {/* Smoribus */}
-      <div id="smoribus">
-        <Products />
-      </div>
-
-      {/* Menu */}
-      <div id="menu">
-        <Menu />
-      </div>
+      {/* Smoribus & Morifries */}
+      <Products />
 
       {/* Order */}
       <div id="order">
