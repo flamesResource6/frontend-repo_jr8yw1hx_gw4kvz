@@ -1,26 +1,47 @@
-import { useState } from 'react'
+import Hero from './components/Hero'
+import Products from './components/Products'
+import Menu from './components/Menu'
+import Order from './components/Order'
+import Footer from './components/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-white text-orange-900">
+      {/* Header / Brand */}
+      <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 bg-white/90 border-b border-orange-100">
+        <div className="mx-auto max-w-6xl px-6 h-14 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="h-7 w-7 rounded-lg bg-orange-600" />
+            <span className="font-extrabold tracking-tight text-orange-800">Moribus 1</span>
+          </div>
+          <nav className="hidden sm:flex items-center gap-6 text-sm text-orange-800/80">
+            <a href="#smoribus" className="hover:text-orange-900">Smoribus</a>
+            <a href="#morifries" className="hover:text-orange-900">Morifries</a>
+            <a href="#menu" className="hover:text-orange-900">Menu</a>
+            <a href="#order" className="hover:text-orange-900">Order</a>
+          </nav>
         </div>
+      </header>
+
+      {/* Hero */}
+      <Hero />
+
+      {/* Smoribus */}
+      <div id="smoribus">
+        <Products />
       </div>
+
+      {/* Menu */}
+      <div id="menu">
+        <Menu />
+      </div>
+
+      {/* Order */}
+      <div id="order">
+        <Order />
+      </div>
+
+      <Footer />
     </div>
   )
 }
